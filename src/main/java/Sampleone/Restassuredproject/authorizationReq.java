@@ -53,7 +53,7 @@ public class authorizationReq {
 		String token=js.get("access_token");
 		
 		
-		//getresources
+		//getresources of rahulshetty.com
 	
 		
 		String resources=given().urlEncodingEnabled(false).
