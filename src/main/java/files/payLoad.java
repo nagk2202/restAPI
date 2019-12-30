@@ -30,35 +30,14 @@ public class payLoad {
 		return s;
 	}
 	
-	public static String AddbookpayLoad(String bookname, String isbn, String aisle) {
+	public static String AddbookpayLoad() {
 		String add="{\r\n" + 
 				"\r\n" + 
-				"\"name\":\""+bookname+"\",\r\n" + 
-				"\"isbn\":\""+isbn+"\",\r\n" + 
-				"\"aisle\":\""+aisle+"\",\r\n" + 
+				"\"name\":\"mahesh\",\r\n" + 
+				"\"isbn\":\"nag\",\r\n" + 
+				"\"aisle\":\"227\",\r\n" + 
 				"\"author\":\"John foe\"\r\n" + 
 				"}\r\n";
 		return add;
 	}
-	
-	public static String createissuePay() {
-		
-		String cre="{\r\n" + 
-				"    \"fields\": {\r\n" + 
-				"       \"project\":\r\n" + 
-				"       {\r\n" + 
-				"          \"key\": \"DMS\"\r\n" + 
-				"       },\r\n" + 
-				"       \"summary\": \"REST ye merry gentlemen.\",\r\n" + 
-				"       \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\r\n" + 
-				"       \"issuetype\": {\r\n" + 
-				"          \"name\": \"Bug\"\r\n" + 
-				"       }\r\n" + 
-				"   }\r\n" + 
-				"}";
-		
-		return cre;
-	}
-
-	
 }

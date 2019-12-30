@@ -1,16 +1,13 @@
 package files;
 
 import java.io.FileInputStream;
-import static io.restassured.RestAssured.given;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.testng.ReporterConfig.Property;
 
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.path.xml.XmlPath;
-import io.restassured.response.Response;
 
 public class reusableMethods {
 	
@@ -33,17 +30,5 @@ public class reusableMethods {
 		prop=new Properties();
 		prop.load(fi);
 		return prop;
-    }
-    
-    
-    public static  String getSessionKey() throws IOException {
-    	
-    	RestAssured.baseURI=variables().getProperty("JiraHost");
-    	Response rawRes=given().
-    	body("{ \"username\": \"nag\", \"password\": \"password\" }").
-    	when().get("/rest/auth/1/session").then().statusCode(200).and().extract().response();
-    	String strresponse=rawRes.asString();
-    	String key= Json(strresponse).get("session.value");
-    	return key;
     }
 }

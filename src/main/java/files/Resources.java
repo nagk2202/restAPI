@@ -1,15 +1,7 @@
 package files;
 
-import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import files.reusableMethods;
-import static io.restassured.RestAssured.given;
-
-import java.io.IOException;
-
 public class Resources {
-	static String Sessionid;
+
 	
 	public static String post() {
 		String postreq= "/maps/api/place/add/json";
