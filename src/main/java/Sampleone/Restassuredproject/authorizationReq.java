@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import pojoForDeserialization.getCources;
 import files.reusableMethods;
 
 import static io.restassured.RestAssured.given;
@@ -56,11 +57,11 @@ public class authorizationReq {
 		//getresources of rahulshetty.com
 	
 		
-		String resources=given().urlEncodingEnabled(false).
+		getCources resources=given().urlEncodingEnabled(false).
 		queryParams("access_token",token).
 		when().
-		get(reusableMethods.variables().getProperty("redirect_uri")).asString();
-		System.out.println(resources);
+		get(reusableMethods.variables().getProperty("redirect_uri")).as(getCources.class);
+		System.out.println(resources.getServices());
 		
 	}
 }
